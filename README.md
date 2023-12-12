@@ -4,8 +4,9 @@
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
 [![Codecov][codecov-src]][codecov-href]
 [![License][license-src]][license-href]
+[![Bundlejs][bundlejs-src]][bundlejs-href]
 
-**kontroll** ("control") is a small, dead-simple package for function behavior controls like debounce, countdown, throttle (limit).
+**kontroll** ("control") is a tiny, dead-simple package for function behavior controls like debounce, countdown, throttle (limit).
 
 ## Features
 - **100% coverage!**
@@ -86,3 +87,5 @@ In you wish them to have the same timer, you can manually set `options.key` like
 [codecov-href]: https://codecov.io/gh/namesmt/kontroll
 [license-src]: https://img.shields.io/github/license/namesmt/kontroll.svg?style=flat&colorA=18181B&colorB=F0DB4F
 [license-href]: https://github.com/namesmt/kontroll/blob/main/LICENSE
+[bundlejs-src]: https://deno.bundlejs.com/badge?q=kontroll@0.1.0&colorA=18181B&colorB=F0DB4F
+[bundlejs-href]: https://bundlejs.com/?q=klona
