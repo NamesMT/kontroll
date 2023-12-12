@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v0.1.2
+
+[compare changes](https://github.com/namesmt/kontroll/compare/v0.1.1...v0.1.2)
+
+### 🏡 Chore
+
+- Remove redundant packages ([9ebca05](https://github.com/namesmt/kontroll/commit/9ebca05))
+
+### ❤️ Contributors
+
+- Trung Dang <trung.dangquoc@gameloft.com>
+
 ## v0.1.1
 
 [compare changes](https://github.com/namesmt/kontroll/compare/v0.1.0...v0.1.1)
