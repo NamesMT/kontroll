@@ -88,4 +88,4 @@ In you wish them to have the same timer, you can manually set `options.key` like
 [license-src]: https://img.shields.io/github/license/namesmt/kontroll.svg?style=flat&colorA=18181B&colorB=F0DB4F
 [license-href]: https://github.com/namesmt/kontroll/blob/main/LICENSE
 [bundlejs-src]: https://deno.bundlejs.com/badge?q=kontroll@0.1.0&colorA=18181B&colorB=F0DB4F
-[bundlejs-href]: https://bundlejs.com/?q=klona
+[bundlejs-href]: https://bundlejs.com/?q=kontroll
