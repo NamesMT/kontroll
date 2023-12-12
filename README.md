@@ -1,4 +1,9 @@
-# kontroll [![NPM version](https://img.shields.io/npm/v/kontroll?color=a1b858&label=)](https://www.npmjs.com/package/kontroll)
+# kontroll ![TypeScript](https://img.shields.io/badge/♡-%23007ACC.svg?logo=typescript&logoColor=white)
+
+[![npm version][npm-version-src]][npm-version-href]
+[![npm downloads][npm-downloads-src]][npm-downloads-href]
+[![Codecov][codecov-src]][codecov-href]
+[![License][license-src]][license-href]
 
 **kontroll** ("control") is a small, dead-simple package for function behavior controls like debounce, countdown, throttle (limit).
 
@@ -70,3 +75,14 @@ In you wish them to have the same timer, you can manually set `options.key` like
 ## License
 
 [MIT](./LICENSE) License © 2023 [NamesMT](https://github.com/NamesMT)
+
+<!-- Badges -->
+
+[npm-version-src]: https://img.shields.io/npm/v/kontroll?style=flat&colorA=18181B&colorB=F0DB4F
+[npm-version-href]: https://npmjs.com/package/kontroll
+[npm-downloads-src]: https://img.shields.io/npm/dm/kontroll?style=flat&colorA=18181B&colorB=F0DB4F
+[npm-downloads-href]: https://npmjs.com/package/kontroll
+[codecov-src]: https://img.shields.io/codecov/c/gh/namesmt/kontroll/main?style=flat&colorA=18181B&colorB=F0DB4F
+[codecov-href]: https://codecov.io/gh/namesmt/kontroll
+[license-src]: https://img.shields.io/github/license/namesmt/kontroll.svg?style=flat&colorA=18181B&colorB=F0DB4F
+[license-href]: https://github.com/namesmt/kontroll/blob/main/LICENSE
