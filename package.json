@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.1.0",
   "packageManager": "pnpm@8.12.0",
-  "description": "",
+  "description": "kontroll (\"control\") is a tiny, dead-simple package for function behavior controls like debounce, countdown, throttle (limit).",
   "author": "NamesMT <dangquoctrung123@gmail.com>",
   "license": "MIT",
   "funding": "https://github.com/sponsors/namesmt",
@@ -38,12 +38,15 @@
     "dev": "pnpm run watch",
     "play": "pnpm run stub && pnpm run --filter playground dev",
     "play:useBuild": "pnpm run build && pnpm run --filter playground dev",
+
     "lint": "eslint .",
     "test": "vitest",
     "test:types": "tsc --noEmit --skipLibCheck",
     "check": "pnpm lint && pnpm test:types && vitest run --coverage",
+
     "build": "unbuild",
     "release": "pnpm dlx changelogen@latest --release --push --publish",
+
     "prepare": "simple-git-hooks",
     "prepublishOnly": "pnpm run build"
   },
