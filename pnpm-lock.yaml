@@ -10,13 +10,6 @@ overrides:
 importers:
 
   .:
-    dependencies:
-      consola:
-        specifier: ^3.2.3
-        version: 3.2.3
-      std-env:
-        specifier: ^3.6.0
-        version: 3.6.0
     devDependencies:
       '@antfu/eslint-config':
         specifier: ^2.4.4
@@ -54,12 +47,12 @@ importers:
 
   playground:
     devDependencies:
-      nodemon:
-        specifier: ^3.0.1
-        version: 3.0.2
       kontroll:
         specifier: workspace:^
         version: link:..
+      nodemon:
+        specifier: ^3.0.1
+        version: 3.0.2
       vite:
         specifier: ^5.0.2
         version: 5.0.2(@types/node@20.10.4)
@@ -1887,6 +1880,7 @@ packages:
   /consola@3.2.3:
     resolution: {integrity: sha512-I5qxpzLv+sJhTVEoLYNcTW+bThDCPsit0vLNKShZx6rLtpilNpmmeTPaeqJb9ZE9dV3DGaeby6Vuhrw38WjeyQ==}
     engines: {node: ^14.18.0 || >=16.10.0}
+    dev: true
 
   /convert-source-map@2.0.0:
     resolution: {integrity: sha512-Kvp459HrV2FEJ1CAsi1Ku+MY3kasH19TFykTz2xWmMeq6bk2NU3XXvfJ+Q61m0xktWwt+1HSYf3JZsTms3aRJg==}
@@ -4431,6 +4425,7 @@ packages:
 
   /std-env@3.6.0:
     resolution: {integrity: sha512-aFZ19IgVmhdB2uX599ve2kE6BIE3YMnQ6Gp6BURhW/oIzpXGKr878TQfAQZn1+i0Flcc/UKUy1gOlcfaUBCryg==}
+    dev: true
 
   /string-argv@0.3.2:
     resolution: {integrity: sha512-aqD2Q0144Z+/RqG52NeHEkZauTAUWJO8c6yTftGJKO3Tja5tUgIfmIl6kExvhtxSDP7fXB6DvzkfMpCd/F3G+Q==}
