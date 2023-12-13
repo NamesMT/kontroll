@@ -13,7 +13,7 @@ export default defineBuildConfig({
     //   esbuild: { minify: true },
     // },
   ],
-  declaration: 'node16',
+  declaration: 'compatible',
   clean: true,
   rollup: {
     esbuild: {
