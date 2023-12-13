@@ -1,6 +1,23 @@
 # Changelog
 
 
+## v0.1.3
+
+[compare changes](https://github.com/namesmt/kontroll/compare/v0.1.2...v0.1.3)
+
+### 📖 Documentation
+
+- **README:** Link typo ([de4125a](https://github.com/namesmt/kontroll/commit/de4125a))
+- **README:** Should not link fixed version number ([7c70eba](https://github.com/namesmt/kontroll/commit/7c70eba))
+
+### 📦 Build
+
+- Temporarily output .d.ts for jsDocs ([f183f7d](https://github.com/namesmt/kontroll/commit/f183f7d))
+
+### ❤️ Contributors
+
+- Trung Dang <trung.dangquoc@gameloft.com>
+
 ## v0.1.2
 
 [compare changes](https://github.com/namesmt/kontroll/compare/v0.1.1...v0.1.2)
