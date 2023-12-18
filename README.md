@@ -11,6 +11,7 @@
 ## Features
 - **100% coverage!**
 - **Self-explained**: for real, every functions and options have TSDoc comments to explain their behavior plus examples at a **hover** *(based on your IDE)*, apart from the already intuitive logic path.
+  - [![jsDocs.io][jsDocs-src]][jsDocs-href]
 - **Clearable**: you can stop pending timers by calling the returned clearer function or use the `clear(key)` function.
 - **Promise aware**: avoid duplicated call if your promise haven't settled.
 
@@ -79,13 +80,15 @@ In you wish them to have the same timer, you can manually set `options.key` like
 
 <!-- Badges -->
 
-[npm-version-src]: https://img.shields.io/npm/v/kontroll?style=flat&colorA=18181B&colorB=F0DB4F
+[npm-version-src]: https://img.shields.io/npm/v/kontroll?labelColor=18181B&color=F0DB4F
 [npm-version-href]: https://npmjs.com/package/kontroll
-[npm-downloads-src]: https://img.shields.io/npm/dm/kontroll?style=flat&colorA=18181B&colorB=F0DB4F
+[npm-downloads-src]: https://img.shields.io/npm/dm/kontroll?labelColor=18181B&color=F0DB4F
 [npm-downloads-href]: https://npmjs.com/package/kontroll
-[codecov-src]: https://img.shields.io/codecov/c/gh/namesmt/kontroll/main?style=flat&colorA=18181B&colorB=F0DB4F
+[codecov-src]: https://img.shields.io/codecov/c/gh/namesmt/kontroll/main?labelColor=18181B&color=F0DB4F
 [codecov-href]: https://codecov.io/gh/namesmt/kontroll
-[license-src]: https://img.shields.io/github/license/namesmt/kontroll.svg?style=flat&colorA=18181B&colorB=F0DB4F
+[license-src]: https://img.shields.io/github/license/namesmt/kontroll.svg?labelColor=18181B&color=F0DB4F
 [license-href]: https://github.com/namesmt/kontroll/blob/main/LICENSE
-[bundlejs-src]: https://deno.bundlejs.com/badge?q=kontroll&colorA=18181B&colorB=F0DB4F
+[bundlejs-src]: https://img.shields.io/bundlejs/size/kontroll?labelColor=18181B&color=F0DB4F
 [bundlejs-href]: https://bundlejs.com/?q=kontroll
+[jsDocs-src]: https://img.shields.io/badge/Check_out-jsDocs.io---?labelColor=18181B&color=F0DB4F
+[jsDocs-href]: https://www.jsdocs.io/package/kontroll
