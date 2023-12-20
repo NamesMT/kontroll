@@ -13,7 +13,17 @@
     "url": "git+https://github.com/namesmt/kontroll.git"
   },
   "bugs": "https://github.com/namesmt/kontroll/issues",
-  "keywords": [],
+  "keywords": [
+    "function",
+    "control",
+    "invoke",
+    "debounce",
+    "throttle",
+    "countdown",
+    "limit",
+    "interval",
+    "rate"
+  ],
   "sideEffects": false,
   "exports": {
     ".": {
