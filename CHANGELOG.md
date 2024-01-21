@@ -1,6 +1,21 @@
 # Changelog
 
 
+## v1.0.0
+
+[compare changes](https://github.com/namesmt/kontroll/compare/v0.1.4...v1.0.0)
+
+### 🏡 Chore
+
+- **package.json:** Add keywords ([6068e00](https://github.com/namesmt/kontroll/commit/6068e00))
+- **lint-staged:** Changed to `eslint` without `--fix` ([9017c9c](https://github.com/namesmt/kontroll/commit/9017c9c))
+- Update deps ([7604ec2](https://github.com/namesmt/kontroll/commit/7604ec2))
+- Update deps ([a230ca5](https://github.com/namesmt/kontroll/commit/a230ca5))
+
+### ❤️ Contributors
+
+- NamesMT ([@NamesMT](http://github.com/NamesMT))
+
 ## v0.1.4
 
 [compare changes](https://github.com/namesmt/kontroll/compare/v0.1.3...v0.1.4)
