@@ -55,12 +55,13 @@ If a `options.key` is not present, key are taken as `callback.toString()`.
 <!-- Explaining the basic for sleep derived beginner :> -->
 If you call something like:
 ```js
-// * Case 1, (arrow) function with unchanged/variable-only body
+// // * Case 1, (arrow) function with unchanged/variable-only body
 debounce(1000, () => console.log(variable))
 
-// * Case 2, declared function
+
+// // * Case 2, declared function
 debounce(1000, makeDoSum(1, 2))
-// For declared function, input could be changed.
+// For declared function, it's parameter could be changed and still share the same key.
 debounce(1000, makeDoSum(2, 3))
 ```
 multiple times,  
