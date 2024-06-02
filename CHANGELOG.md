@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.0.1
+
+[compare changes](https://github.com/namesmt/kontroll/compare/v1.0.0...v1.0.1)
+
+### 🏡 Chore
+
+- Update deps ([0accb7b](https://github.com/namesmt/kontroll/commit/0accb7b))
+
+### ❤️ Contributors
+
+- NamesMT ([@NamesMT](http://github.com/NamesMT))
+
 ## v1.0.0
 
 [compare changes](https://github.com/namesmt/kontroll/compare/v0.1.4...v1.0.0)

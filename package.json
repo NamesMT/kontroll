@@ -1,7 +1,7 @@
 {
   "name": "kontroll",
   "type": "module",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "packageManager": "pnpm@9.1.4",
   "description": "kontroll (\"control\") is a tiny, dead-simple package for function behavior controls like debounce, countdown, throttle (limit).",
   "author": "NamesMT <dangquoctrung123@gmail.com>",
