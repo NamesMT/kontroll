@@ -2,9 +2,9 @@ type Fn<T = void> = () => T
 type FnWithArgs<T = void> = (...args: any) => T
 
 export interface KontrollStore {
-  [x: keyof any]: {
+  [x: PropertyKey]: {
     timer: ReturnType<typeof setTimeout>
-    callback: Fn
+    callback: Fn<any | Promise<any>>
     trailing?: [FnWithArgs, ...any]
   }
 }
@@ -20,6 +20,11 @@ export function clear(keyable: Fn | keyof KontrollStore) {
   }
 }
 
+export type KontrollClearer = Fn
+function makeClearer(key: keyof KontrollStore): KontrollClearer {
+  return () => { clear(key) }
+}
+
 async function finish(key: keyof KontrollStore) {
   if (keyStore[key]) {
     const trailing = keyStore[key].trailing
@@ -32,16 +37,9 @@ async function finish(key: keyof KontrollStore) {
   }
 }
 
-export type KontrollClearer = Fn
-function makeClearer(key: keyof KontrollStore): KontrollClearer {
-  return () => { clear(key) }
-}
-
-function createTimeout(key: keyof KontrollStore, ms: number, callback: Fn) {
+function createTimeout(ms: number, callback: Fn, key: keyof KontrollStore) {
   const timer = setTimeout(
-    () => {
-      finish(key)
-    },
+    () => { finish(key) },
     ms,
   )
 
@@ -93,12 +91,7 @@ export interface KontrollCountdownOptions extends KontrollBaseOptions {
  * // Result: 2
  * ```
  */
-export function countdown(ms: number, callback: Fn, options: KontrollCountdownOptions = {}) {
-  const {
-    key = callback.toString(),
-    replace = false,
-  } = options
-
+export function countdown(ms: number, callback: Fn, { key = callback.toString(), replace }: KontrollCountdownOptions = {}) {
   if (keyStore[key]) {
     if (replace)
       keyStore[key].callback = callback
@@ -106,7 +99,7 @@ export function countdown(ms: number, callback: Fn, options: KontrollCountdownOp
     return makeClearer(key)
   }
 
-  return createTimeout(key, ms, callback)
+  return createTimeout(ms, callback, key)
 }
 
 export interface KontrollDebounceOptions extends KontrollBaseOptions {
@@ -143,12 +136,7 @@ export interface KontrollDebounceOptions extends KontrollBaseOptions {
  * // Result: 3
  * ```
  */
-export function debounce(ms: number, callback: Fn, options: KontrollDebounceOptions = {}) {
-  const {
-    key = callback.toString(),
-    leading = false,
-  } = options
-
+export function debounce(ms: number, callback: Fn, { key = callback.toString(), leading }: KontrollDebounceOptions = {}) {
   if (keyStore[key]) { clear(key) }
   else {
     // if no pending call and leading: true, execute function immediately
@@ -156,7 +144,7 @@ export function debounce(ms: number, callback: Fn, options: KontrollDebounceOpti
       return throttle(ms, callback, { key })
   }
 
-  return createTimeout(key, ms, callback)
+  return createTimeout(ms, callback, key)
 }
 
 export interface KontrollThrottleOptions extends KontrollBaseOptions {
@@ -199,49 +187,15 @@ export interface KontrollThrottleOptions extends KontrollBaseOptions {
  * ```
  * 
  */
-export function throttle(ms: number, callback: Fn, options: KontrollThrottleOptions = {}) {
-  const {
-    key = callback.toString(),
-    trailing = false,
-  } = options
-
+export function throttle(ms: number, callback: Fn, { key = callback.toString(), trailing }: KontrollThrottleOptions = {}) {
   if (keyStore[key]) {
     if (trailing)
-      keyStore[key].trailing = [throttle, ms, callback, options]
+      keyStore[key].trailing = [throttle, ms, callback, { key }]
 
     return makeClearer(key)
   }
 
   callback()
 
-  return createTimeout(key, ms, () => { })
+  return createTimeout(ms, () => { }, key)
 }
-
-// // Remnants from my old prototype, keeping for reference.
-// export class Kontroll {
-//   key: keyof KontrollStore
-//   ms: number
-//   callback: Fn
-
-//   constructor(key: keyof KontrollStore, ms?: number, callback?: Fn) {
-//     this.key = key
-//     this.ms = ms ?? 500
-//     this.callback = callback ?? (() => { console.warn('Empty callback') })
-//   }
-
-//   clear() {
-//     clear(this.key)
-//   }
-
-//   debounce(ms?: number, callback?: Fn) {
-//     return debounce(ms ?? this.ms, callback ?? this.callback, { key: this.key })
-//   }
-
-//   countdown(ms?: number, callback?: Fn) {
-//     return countdown(ms ?? this.ms, callback ?? this.callback, { key: this.key })
-//   }
-
-//   throttle(ms?: number, callback?: Fn) {
-//     return throttle(ms ?? this.ms, callback ?? this.callback, { key: this.key })
-//   }
-// }
