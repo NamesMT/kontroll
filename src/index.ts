@@ -6,6 +6,7 @@ export interface KontrollStore {
     timer: ReturnType<typeof setTimeout>
     callback: Fn<any | Promise<any>>
     trailing?: [FnWithArgs, ...any]
+    finishing?: boolean
   }
 }
 const keyStore: KontrollStore = {}
@@ -27,6 +28,8 @@ function makeClearer(key: keyof KontrollStore): KontrollClearer {
 
 async function finish(key: keyof KontrollStore) {
   if (keyStore[key]) {
+    keyStore[key].finishing = true
+
     const trailing = keyStore[key].trailing
 
     await keyStore[key].callback()
@@ -38,6 +41,9 @@ async function finish(key: keyof KontrollStore) {
 }
 
 function createTimeout(ms: number, callback: Fn, key: keyof KontrollStore) {
+  if (keyStore[key]?.finishing)
+    return makeClearer(key)
+
   const timer = setTimeout(
     () => { finish(key) },
     ms,
@@ -137,7 +143,7 @@ export interface KontrollDebounceOptions extends KontrollBaseOptions {
  * ```
  */
 export function debounce(ms: number, callback: Fn, { key = callback.toString(), leading }: KontrollDebounceOptions = {}) {
-  if (keyStore[key]) { clear(key) }
+  if (keyStore[key] && !keyStore[key].finishing) { clear(key) }
   else {
     // if no pending call and leading: true, execute function immediately
     if (leading)

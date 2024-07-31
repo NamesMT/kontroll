@@ -89,6 +89,26 @@ describe('advanced', async () => {
     expect(maybeIncreased).toBe(shadowValue + 2)
   })
 
+  it('debounce - promise aware', async () => {
+    const shadowValue = maybeIncreased
+    debounce(100, async () => {
+      await setTimeout(300)
+      return makeIncreaseBy(1)()
+    }) // bounce +1, timer 100 + promise 300
+    await setTimeout(50) // timer 50 + promise 300
+    expect(maybeIncreased).toBe(shadowValue)
+
+    await setTimeout(300) // timer 0 + promise 50
+    debounce(100, async () => {
+      await setTimeout(300)
+      return makeIncreaseBy(1)()
+    }) // try adding debounce, should be ignored
+    expect(maybeIncreased).toBe(shadowValue)
+
+    await setTimeout(50) // timer 0 + promise 0, done bounce +1
+    expect(maybeIncreased).toBe(shadowValue + 1)
+  })
+
   it('debounce leading', async () => {
     const shadowValue = maybeIncreased
     debounce(100, makeIncreaseBy(1), { leading: true }) // done lead bounce +1, timer 100
