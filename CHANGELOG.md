@@ -1,6 +1,33 @@
 # Changelog
 
 
+## v1.0.2
+
+[compare changes](https://github.com/namesmt/kontroll/compare/v1.0.1...v1.0.2)
+
+### 🩹 Fixes
+
+- Proper promise aware + tests ([4e8d4a6](https://github.com/namesmt/kontroll/commit/4e8d4a6))
+
+### 💅 Refactors
+
+- Codebase minor refactor ([b61a134](https://github.com/namesmt/kontroll/commit/b61a134))
+
+### 📖 Documentation
+
+- README ([0274174](https://github.com/namesmt/kontroll/commit/0274174))
+
+### 🏡 Chore
+
+- **eslint:** Remove `unocss` plugin ([6244a5e](https://github.com/namesmt/kontroll/commit/6244a5e))
+- Remove old `.devcontainer` ([5d76074](https://github.com/namesmt/kontroll/commit/5d76074))
+- Update deps ([7cfda43](https://github.com/namesmt/kontroll/commit/7cfda43))
+
+### ❤️ Contributors
+
+- NamesMT ([@NamesMT](http://github.com/NamesMT))
+- Trung Dang ([@NamesMT](http://github.com/NamesMT))
+
 ## v1.0.1
 
 [compare changes](https://github.com/namesmt/kontroll/compare/v1.0.0...v1.0.1)
