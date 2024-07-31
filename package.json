@@ -60,7 +60,6 @@
   "devDependencies": {
     "@antfu/eslint-config": "^2.19.2",
     "@types/node": "^20.13.0",
-    "@unocss/eslint-plugin": "^0.58.9",
     "@vitest/coverage-v8": "^1.6.0",
     "eslint": "^8.57.0",
     "lint-staged": "^15.2.5",
