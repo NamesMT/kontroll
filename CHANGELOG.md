@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.0.3
+
+[compare changes](https://github.com/namesmt/kontroll/compare/v1.0.2...v1.0.3)
+
+### 🏡 Chore
+
+- Housekeeping ([dbe03a4](https://github.com/namesmt/kontroll/commit/dbe03a4))
+
+### ❤️ Contributors
+
+- NamesMT ([@NamesMT](http://github.com/NamesMT))
+
 ## v1.0.2
 
 [compare changes](https://github.com/namesmt/kontroll/compare/v1.0.1...v1.0.2)
