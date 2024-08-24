@@ -58,7 +58,6 @@ If you call something like:
 // // * Case 1, (arrow) function with unchanged/variable-only body
 debounce(1000, () => console.log(variable))
 
-
 // // * Case 2, declared function
 debounce(1000, makeDoSum(1, 2))
 // For declared function, it's parameter could be changed and still share the same key.
@@ -77,7 +76,7 @@ In you wish them to have the same timer, you can manually set `options.key` like
 
 ## License
 
-[MIT](./LICENSE) License © 2023 [NamesMT](https://github.com/NamesMT)
+[MIT](./LICENSE) License © 2024 [NamesMT](https://github.com/NamesMT)
 
 <!-- Badges -->
 
