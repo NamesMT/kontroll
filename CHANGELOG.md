@@ -1,6 +1,22 @@
 # Changelog
 
 
+## v1.0.4
+
+[compare changes](https://github.com/namesmt/kontroll/compare/v1.0.3...v1.0.4)
+
+### 🌊 Types
+
+- Fix jsdoc comments ([7e0876d](https://github.com/namesmt/kontroll/commit/7e0876d))
+
+### 🏡 Chore
+
+- Housekeep ([700b94e](https://github.com/namesmt/kontroll/commit/700b94e))
+
+### ❤️ Contributors
+
+- NamesMT ([@NamesMT](https://github.com/NamesMT))
+
 ## v1.0.3
 
 [compare changes](https://github.com/namesmt/kontroll/compare/v1.0.2...v1.0.3)
