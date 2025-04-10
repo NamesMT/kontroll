@@ -74,8 +74,10 @@ export interface KontrollCountdownOptions extends KontrollBaseOptions {
   replace?: boolean
 }
 /**
- * Countdown for a period of ms then execute the first/replaced callback, based on `options.replace`.  
+ * Countdown for a period of ms then execute the first/replaced callback, based on `options.replace`.
+ * 
  * Calls while the timer haven't finished are dropped.
+ * 
  * ---
  * 
  * Example
@@ -86,9 +88,10 @@ export interface KontrollCountdownOptions extends KontrollBaseOptions {
  * // 500ms passed
  * // Result: 1
  * ```
+ * 
  * ---
  * 
- * Example with `options.replace=true`:  
+ * Example with `options.replace=true`:
  * ```
  * countdown(1000, doSum(1))
  * // 500ms passed
@@ -116,11 +119,13 @@ export interface KontrollDebounceOptions extends KontrollBaseOptions {
   leading?: boolean
 }
 /**
- * Creates a timer that will execute the callback upon finish, calls while the timer haven't finished recreates the timer.  
+ * Creates a timer that will execute the callback upon finish, calls while the timer haven't finished recreates the timer.
+ * 
  * If `options.leading`, execute callback immediately for initial call.
+ * 
  * ---
  * 
- * Example:  
+ * Example:
  * ```
  * debounce(1000, doSum(1))
  * // 500ms passed
@@ -128,9 +133,10 @@ export interface KontrollDebounceOptions extends KontrollBaseOptions {
  * // 1000ms passed
  * // Result: 2
  * ```
+ * 
  * ---
  * 
- * Example with `options.leading`:  
+ * Example with `options.leading`:
  * ```
  * debounce(1000, doSum(1), { leading: true })
  * // Result: 1
@@ -161,13 +167,17 @@ export interface KontrollThrottleOptions extends KontrollBaseOptions {
   trailing?: boolean
 }
 /**
- * Executes the callback, and bypass any subsequent calls for a period of ms.  
- * Calls while the timer haven't finished are dropped.  
- * If `options.trailing` and calls while the timer haven't finished are received,  
+ * Executes the callback, and bypass any subsequent calls for a period of ms.
+ * 
+ * Calls while the timer haven't finished are dropped.
+ * 
+ * If `options.trailing` and calls while the timer haven't finished are received,
+ * 
  * an additional execution with last received arguments is performed.
+ * 
  * ---
  * 
- * Example:  
+ * Example:
  * ```
  * throttle(1000, doSum(1))
  * // Result: 1
@@ -176,9 +186,10 @@ export interface KontrollThrottleOptions extends KontrollBaseOptions {
  * // 9999ms passed
  * // (Nothing)
  * ```
+ * 
  * ---
  * 
- * Example with `options.trailing`:  
+ * Example with `options.trailing`:
  * ```
  * throttle(1000, doSum(1))
  * // Result: 1
