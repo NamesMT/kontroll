@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.0.5
+
+[compare changes](https://github.com/namesmt/kontroll/compare/v1.0.4...v1.0.5)
+
+### 💅 Refactors
+
+- Rename internal fn for readability ([f3d0261](https://github.com/namesmt/kontroll/commit/f3d0261))
+
+### ❤️ Contributors
+
+- NamesMT ([@NamesMT](https://github.com/NamesMT))
+
 ## v1.0.4
 
 [compare changes](https://github.com/namesmt/kontroll/compare/v1.0.3...v1.0.4)
