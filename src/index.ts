@@ -22,7 +22,7 @@ export function clear(keyable: Fn | keyof KontrollStore) {
 }
 
 export type KontrollClearer = Fn
-function makeClearer(key: keyof KontrollStore): KontrollClearer {
+function createClearFn(key: keyof KontrollStore): KontrollClearer {
   return () => { clear(key) }
 }
 
@@ -42,7 +42,7 @@ async function finish(key: keyof KontrollStore) {
 
 function createTimeout(ms: number, callback: Fn, key: keyof KontrollStore) {
   if (keyStore[key]?.finishing)
-    return makeClearer(key)
+    return createClearFn(key)
 
   const timer = setTimeout(
     () => { finish(key) },
@@ -54,7 +54,7 @@ function createTimeout(ms: number, callback: Fn, key: keyof KontrollStore) {
     callback,
   }
 
-  return makeClearer(key)
+  return createClearFn(key)
 }
 
 // TODO: do .toString() have big performance overhead?, maybe implements a WeakMap?
@@ -105,7 +105,7 @@ export function countdown(ms: number, callback: Fn, { key = callback.toString(),
     if (replace)
       keyStore[key].callback = callback
 
-    return makeClearer(key)
+    return createClearFn(key)
   }
 
   return createTimeout(ms, callback, key)
@@ -209,7 +209,7 @@ export function throttle(ms: number, callback: Fn, { key = callback.toString(), 
     if (trailing)
       keyStore[key].trailing = [throttle, ms, callback, { key }]
 
-    return makeClearer(key)
+    return createClearFn(key)
   }
 
   callback()
