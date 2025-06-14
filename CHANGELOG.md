@@ -1,6 +1,22 @@
 # Changelog
 
 
+## v1.1.0
+
+[compare changes](https://github.com/namesmt/kontroll/compare/v1.0.5...v1.1.0)
+
+### 🚀 Enhancements
+
+- Add `getInstance` ([0c74a52](https://github.com/namesmt/kontroll/commit/0c74a52))
+
+### 🩹 Fixes
+
+- `throttle` promise-aware ([a29749f](https://github.com/namesmt/kontroll/commit/a29749f))
+
+### ❤️ Contributors
+
+- NamesMT ([@NamesMT](https://github.com/NamesMT))
+
 ## v1.0.5
 
 [compare changes](https://github.com/namesmt/kontroll/compare/v1.0.4...v1.0.5)
