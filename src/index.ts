@@ -212,7 +212,7 @@ export function throttle(ms: number, callback: Fn, { key = callback.toString(), 
     return createClearFn(key)
   }
 
-  callback()
+  const r = callback()
 
-  return createTimeout(ms, () => { }, key)
+  return createTimeout(ms, () => r, key)
 }
