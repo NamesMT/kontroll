@@ -2,13 +2,16 @@ type Fn<T = void> = () => T
 type FnWithArgs<T = void> = (...args: any) => T
 
 export interface KontrollStore {
-  [x: PropertyKey]: {
-    timer: ReturnType<typeof setTimeout>
-    callback: Fn<any | Promise<any>>
-    trailing?: [FnWithArgs, ...any]
-    finishing?: boolean
-  }
+  [x: PropertyKey]: KontrollInstance
 }
+
+export interface KontrollInstance {
+  timer: ReturnType<typeof setTimeout>
+  callback: Fn<any | Promise<any>>
+  trailing?: [FnWithArgs, ...any]
+  finishing?: boolean
+}
+
 const keyStore: KontrollStore = {}
 
 export function clear(callback: Fn): void
@@ -19,6 +22,25 @@ export function clear(keyable: Fn | keyof KontrollStore) {
     clearTimeout(keyStore[key].timer)
     delete keyStore[key]
   }
+}
+
+/**
+ * Returns the {@link KontrollInstance} for the given key, if exists.
+ * 
+ * Could be useful to check if a promise is executing and not settled.
+ * 
+ * ---
+ * 
+ * Example
+ * ```
+ * debounce(1, async => await sleep(1000), { key: '1sec' })
+ * // 500ms passed
+ * getInstance('1sec')
+ * // Result: `KontrollInstance` ({ timer: Timeout, callback: <fn>, finishing: true })
+ * ```
+ */
+export function getInstance(key: keyof KontrollStore): KontrollInstance | undefined {
+  return keyStore[key]
 }
 
 export type KontrollClearer = Fn
