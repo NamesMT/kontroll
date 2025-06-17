@@ -52,9 +52,10 @@ async function finish(key: keyof KontrollStore) {
   if (keyStore[key]) {
     keyStore[key].finishing = true
 
+    await keyStore[key].callback()
+
     const trailing = keyStore[key].trailing
 
-    await keyStore[key].callback()
     clear(key)
 
     if (trailing)
