@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.1.1
+
+[compare changes](https://github.com/namesmt/kontroll/compare/v1.1.0...v1.1.1)
+
+### 🩹 Fixes
+
+- Should read newest trailing after async callback ([8d88d69](https://github.com/namesmt/kontroll/commit/8d88d69))
+
+### ❤️ Contributors
+
+- NamesMT ([@NamesMT](https://github.com/NamesMT))
+
 ## v1.1.0
 
 [compare changes](https://github.com/namesmt/kontroll/compare/v1.0.5...v1.1.0)
