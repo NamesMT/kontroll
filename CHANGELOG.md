@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.1.2
+
+[compare changes](https://github.com/namesmt/kontroll/compare/v1.1.1...v1.1.2)
+
+### 🩹 Fixes
+
+- Trailing not readable in some cases ([f6e2224](https://github.com/namesmt/kontroll/commit/f6e2224))
+
+### ❤️ Contributors
+
+- Trung Dang ([@NamesMT](https://github.com/NamesMT))
+
 ## v1.1.1
 
 [compare changes](https://github.com/namesmt/kontroll/compare/v1.1.0...v1.1.1)
