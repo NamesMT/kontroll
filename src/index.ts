@@ -51,10 +51,9 @@ function createClearFn(key: keyof KontrollStore): KontrollClearer {
 async function finish(key: keyof KontrollStore) {
   if (keyStore[key]) {
     keyStore[key].finishing = true
+    const trailing = keyStore[key].trailing
 
     await keyStore[key].callback()
-
-    const trailing = keyStore[key].trailing
 
     clear(key)
 
