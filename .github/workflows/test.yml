@@ -14,16 +14,16 @@ jobs:
 
     strategy:
       matrix:
-        node: [18.x]
+        node: [22.x]
         os: [ubuntu-latest]
       fail-fast: false
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
       - name: Set node ${{ matrix.node }}
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node }}
 
@@ -36,4 +36,4 @@ jobs:
       - name: Test
         run: pnpm test --coverage
 
-      - uses: codecov/codecov-action@v3
+      - uses: codecov/codecov-action@v4
