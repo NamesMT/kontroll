@@ -27,13 +27,13 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
 
-      - name: Setup
-        run: npm i -g @antfu/ni
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v6
 
       - name: Install
-        run: nci
+        run: pnpm install --frozen-lockfile
 
       - name: Test
-        run: nr test --coverage
+        run: pnpm test --coverage
 
       - uses: codecov/codecov-action@v3
