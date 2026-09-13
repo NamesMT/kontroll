@@ -2,7 +2,7 @@
   "name": "kontroll",
   "type": "module",
   "version": "1.1.2",
-  "packageManager": "pnpm@10.8.0",
+  "packageManager": "pnpm@10.34.5",
   "description": "kontroll (\"control\") is a tiny, dead-simple package for function behavior controls like debounce, countdown, throttle (limit).",
   "author": "NamesMT <dangquoctrung123@gmail.com>",
   "license": "MIT",
@@ -58,20 +58,20 @@
     "prepublishOnly": "pnpm run build"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^4.12.0",
-    "@types/node": "^22.14.0",
-    "@vitest/coverage-v8": "^3.1.1",
-    "eslint": "^9.24.0",
-    "lint-staged": "^15.5.0",
-    "simple-git-hooks": "^2.12.1",
-    "tsx": "^4.19.3",
-    "typescript": "^5.8.3",
-    "unbuild": "^3.5.0",
-    "vitest": "^3.1.1"
+    "@antfu/eslint-config": "^4.19.0",
+    "@types/node": "^22.20.2",
+    "@vitest/coverage-v8": "^3.2.7",
+    "eslint": "^9.39.5",
+    "lint-staged": "^15.5.2",
+    "simple-git-hooks": "^2.14.0",
+    "tsx": "^4.23.13",
+    "typescript": "^5.9.3",
+    "unbuild": "^3.6.1",
+    "vitest": "^3.2.7"
   },
   "pnpm": {
     "overrides": {
-      "is-core-module": "npm:@nolyfill/is-core-module@^1"
+      "is-core-module": "npm:@nolyfill/is-core-module@^1.0.39"
     },
     "onlyBuiltDependencies": [
       "esbuild",
