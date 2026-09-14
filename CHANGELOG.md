@@ -1,6 +1,31 @@
 # Changelog
 
 
+## v1.1.3
+
+[compare changes](https://github.com/namesmt/kontroll/compare/v1.1.2...v1.1.3)
+
+### 🩹 Fixes
+
+- Use relative paths (drop deprecated `baseUrl`) ([dd7d7be](https://github.com/namesmt/kontroll/commit/dd7d7be))
+
+### 🏡 Chore
+
+- Migrate to pnpm 12 ([216f28f](https://github.com/namesmt/kontroll/commit/216f28f))
+
+### ✅ Tests
+
+- Stabilize timing-sensitive tests with unique keys and generous margins ([63ca185](https://github.com/namesmt/kontroll/commit/63ca185))
+
+### 🤖 CI
+
+- Use pnpm/action-setup for pnpm 12 ([7c854cd](https://github.com/namesmt/kontroll/commit/7c854cd))
+- Fix pnpm/node versions (node 22, drop pnpm 8 pin) ([a5358c3](https://github.com/namesmt/kontroll/commit/a5358c3))
+
+### ❤️ Contributors
+
+- NamesMT ([@NamesMT](https://github.com/NamesMT))
+
 ## v1.1.2
 
 [compare changes](https://github.com/namesmt/kontroll/compare/v1.1.1...v1.1.2)
