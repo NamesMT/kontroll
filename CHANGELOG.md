@@ -1,6 +1,26 @@
 # Changelog
 
 
+## v1.2.0
+
+[compare changes](https://github.com/namesmt/kontroll/compare/v1.1.3...v1.2.0)
+
+### 📦 Build
+
+- ⚠️  Migrate to tsdown with native import maps ([0c1cd25](https://github.com/namesmt/kontroll/commit/0c1cd25))
+
+### 🤖 CI
+
+- Bump codecov-action to v5 ([6be6731](https://github.com/namesmt/kontroll/commit/6be6731))
+
+#### ⚠️ Breaking Changes
+
+- ⚠️  Migrate to tsdown with native import maps ([0c1cd25](https://github.com/namesmt/kontroll/commit/0c1cd25))
+
+### ❤️ Contributors
+
+- NamesMT ([@NamesMT](https://github.com/NamesMT))
+
 ## v1.1.3
 
 [compare changes](https://github.com/namesmt/kontroll/compare/v1.1.2...v1.1.3)
