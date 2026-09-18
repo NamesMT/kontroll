@@ -1,6 +1,6 @@
 import { setTimeout } from 'node:timers/promises'
+import { clear, countdown, debounce, getInstance, throttle } from '#src/index.js'
 import { describe, expect, it } from 'vitest'
-import { clear, countdown, debounce, getInstance, throttle } from '~/index'
 
 // Note: JS timers are not 100% accurate, so the tests use generous wait margins
 // (e.g. `await setTimeout(110)` for a 100 ms countdown) and unique keys per test
