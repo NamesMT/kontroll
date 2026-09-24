@@ -85,6 +85,19 @@ In you wish them to have the same timer, you can manually set `options.key` like
 
 Note: the storage to check the key is set globally, if you use `kontroll` in your library, you should prefix the key with your package name.
 
+## Releasing
+
+Releases are version-first and manual:
+
+1. Go to **Actions → Release → Run workflow** on GitHub.
+2. Enter the version to ship, without a leading `v` (e.g. `1.3.0`), and run it. Enable **dry-run** to stop before pushing, releasing and publishing.
+
+The workflow validates the version against `package.json`, lints/type-checks/tests with `pnpm run check`, builds, then lets [changelogen](https://github.com/unjs/changelogen) bump `package.json`, write `CHANGELOG.md`, commit and tag `v<version>`. It pushes the commit and tag, creates the GitHub release from the generated changelog section, and publishes to npm with provenance over OIDC trusted publishing.
+
+**A pushed tag publishes nothing** — this workflow is the only publish path. One-time setup: publish the package once by hand (npm only lets you configure a trusted publisher for a package that already exists), then add this repository and the `release.yml` workflow as a trusted publisher on npmjs.com.
+
+Locally, `pnpm run release:check 1.3.0` validates a version against `package.json`, and `pnpm run release:preview` prints the changelog the next release would get.
+
 ## License
 
 [MIT](./LICENSE) License © 2024 [NamesMT](https://github.com/NamesMT)
