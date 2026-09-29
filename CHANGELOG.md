@@ -1,6 +1,22 @@
 # Changelog
 
 
+## v1.2.1
+
+[compare changes](https://github.com/NamesMT/kontroll/compare/v1.2.0...v1.2.1)
+
+### 📖 Documentation
+
+- Add npm metadata and correct repository URL casing ([2f68f51](https://github.com/NamesMT/kontroll/commit/2f68f51))
+
+### 🤖 CI
+
+- **release:** Dispatch releases by hand and add an AGENTS.md ([f2b8dd1](https://github.com/NamesMT/kontroll/commit/f2b8dd1))
+
+### ❤️ Contributors
+
+- NamesMT ([@NamesMT](https://github.com/NamesMT))
+
 ## v1.2.0
 
 [compare changes](https://github.com/namesmt/kontroll/compare/v1.1.3...v1.2.0)
