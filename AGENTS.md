@@ -48,6 +48,9 @@ GitHub release and npm publish. One-time trusted-publisher setup is in the READM
 
 - The timer store is a module-global keyed by `options.key`, defaulting to `callback.toString()`:
   callbacks with identical bodies share one timer, and the store persists across imports.
+- `debounce(..., { leading: true })` only fires early on the first call — it forwards to `throttle`, whose timer then governs the window.
+- `countdown`'s `replace` swaps the pending callback but keeps the original deadline; the timer is not restarted.
+- While an async callback is in flight the key is marked `finishing`: further `debounce`/`throttle` calls only return a clearer and never run, and `getInstance(key)` exposes that state.
 - `dist/` and `coverage/` are gitignored build output, never committed; ignored files do not trip the
   release workflow's `--clean` check, but untracked non-ignored files do.
 - `engines.node >= 22`; the release workflow publishes on Node 24 while CI tests on Node 22.

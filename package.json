@@ -7,12 +7,12 @@
   "author": "NamesMT <dangquoctrung123@gmail.com>",
   "license": "MIT",
   "funding": "https://github.com/sponsors/namesmt",
-  "homepage": "https://github.com/namesmt/kontroll#readme",
+  "homepage": "https://github.com/NamesMT/kontroll#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/namesmt/kontroll.git"
+    "url": "git+https://github.com/NamesMT/kontroll.git"
   },
-  "bugs": "https://github.com/namesmt/kontroll/issues",
+  "bugs": "https://github.com/NamesMT/kontroll/issues",
   "keywords": [
     "function",
     "control",
@@ -22,7 +22,12 @@
     "countdown",
     "limit",
     "interval",
-    "rate"
+    "rate",
+    "promise",
+    "timer",
+    "utility",
+    "typescript",
+    "esm"
   ],
   "sideEffects": false,
   "imports": {
