@@ -5,6 +5,20 @@
 dependencies, built with [tsdown](https://github.com/rolldown/tsdown), tested with
 [Vitest](https://vitest.dev); published to npm as `kontroll`.
 
+## Docs
+
+Three tiers, so a reader loads only what the task needs:
+
+1. **`AGENTS.md`** (this file) — orientation and the rules that prevent defects. Read every session.
+2. **`.agentDocs/`** — depth that would bloat this file: module rationale, traps with their causes,
+   compatibility rules. Read on demand.
+3. **`README.md` / `docs/`** — for a person using the package, not for an agent.
+
+**There is no `.agentDocs/` here yet and none is needed at this size.** Create one when a section
+above outgrows a screen or two: move the *reasoning* out and keep the *rule* here with a pointer to
+it — nobody reads a file they do not open. Each document opens with a one-line scope, and this file
+links it.
+
 ## Commands
 
 ```sh
@@ -37,20 +51,6 @@ pnpm run release:preview  # print the changelog the next release would get
 - The `#src/*` alias (`package.json` `imports`) maps to `./src/*`; tests import it with a `.js` suffix.
 - TSDoc on every exported function and option — the README and the jsDocs.io badge lean on it.
 
-## Docs
-
-Three tiers, so a reader loads only what the task needs:
-
-1. **`AGENTS.md`** (this file) — orientation and the rules that prevent defects. Read every session.
-2. **`.agentDocs/`** — depth that would bloat this file: module rationale, traps with their causes,
-   compatibility rules. Read on demand.
-3. **`README.md` / `docs/`** — for a person using the package, not for an agent.
-
-**There is no `.agentDocs/` here yet and none is needed at this size.** Create one when a section
-above outgrows a screen or two: move the *reasoning* out and keep the *rule* here with a pointer to
-it — nobody reads a file they do not open. Each document opens with a one-line scope, and this file
-links it.
-
 ## How to work here
 
 - Check who calls it (grep `src/`, `test/`) before changing it; say when impact is unclear rather than
@@ -61,11 +61,10 @@ links it.
 - **Fix the root cause, not the instance.** A bug back under a new name — a copied helper, a rule stated
   twice, a guard bypassed by a second path — is a class: fix it with one implementation, one guard.
   That is the work, not a follow-up to ask for.
-- Verify before claiming, and say which direction you checked. A passing test is not evidence it pinned
-  anything — this suite is timing-sensitive, so confirm a test can fail before trusting it.
+- **Verify before claiming, and say what you checked.** A green test proves only what it asserts — **break the thing it guards and watch it fail.** If it still passes, either the test is decoration or a different guard is running; find out which. Where a stub cannot answer the question, drive the real thing. This suite is timing-sensitive — ~40 bare `setTimeout` waits — so confirm a test can fail before trusting it. Mark anything unverified as unverified.
 - If recall of this project is missing, read this file and `git log` before acting.
 
-## Conciseness (applies everywhere)
+## Conciseness
 
 Prune verbose, keep correctness — code, comments, docs. Code: a comment only for non-obvious intent.
 Docs: one idea per sentence; cut what would not change what a reader does. `git log` already holds the
