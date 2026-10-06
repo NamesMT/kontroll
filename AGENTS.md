@@ -37,6 +37,32 @@ pnpm run release:preview  # print the changelog the next release would get
 - The `#src/*` alias (`package.json` `imports`) maps to `./src/*`; tests import it with a `.js` suffix.
 - TSDoc on every exported function and option — the README and the jsDocs.io badge lean on it.
 
+## How to work here
+
+- Check who calls it (grep `src/`, `test/`) before changing it; say when impact is unclear rather than
+  guessing, and surface what looks needed instead of inventing requirements.
+- Never overwrite or delete a large section you have not understood.
+- Report the risk, not only the change — correctness, integration, and a published package's
+  consumer-visible surface. Mark anything unverified as unverified.
+- **Fix the root cause, not the instance.** A bug back under a new name — a copied helper, a rule stated
+  twice, a guard bypassed by a second path — is a class: fix it with one implementation, one guard.
+  That is the work, not a follow-up to ask for.
+- Verify before claiming, and say which direction you checked. A passing test is not evidence it pinned
+  anything — this suite is timing-sensitive, so confirm a test can fail before trusting it.
+- If recall of this project is missing, read this file and `git log` before acting.
+
+## Conciseness (applies everywhere)
+
+Prune verbose, keep correctness — code, comments, docs. Code: a comment only for non-obvious intent.
+Docs: one idea per sentence; cut what would not change what a reader does. `git log` already holds the
+history — keep the rule, not the story. Never drop a caveat to save a line.
+
+## User-facing docs
+
+`README.md` only — no `docs/` tree here, so do not invent one. Concise first read, depth behind
+`<details>` spoilers, samples that stay runnable; docs ship in the same commit as the change, because
+the README is what npm shows.
+
 ## Releasing
 
 Manual and version-first: dispatch **Actions → Release → Run workflow** with the version. `release.yml`
