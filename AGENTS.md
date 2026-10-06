@@ -37,6 +37,20 @@ pnpm run release:preview  # print the changelog the next release would get
 - The `#src/*` alias (`package.json` `imports`) maps to `./src/*`; tests import it with a `.js` suffix.
 - TSDoc on every exported function and option — the README and the jsDocs.io badge lean on it.
 
+## Docs
+
+Three tiers, so a reader loads only what the task needs:
+
+1. **`AGENTS.md`** (this file) — orientation and the rules that prevent defects. Read every session.
+2. **`.agentDocs/`** — depth that would bloat this file: module rationale, traps with their causes,
+   compatibility rules. Read on demand.
+3. **`README.md` / `docs/`** — for a person using the package, not for an agent.
+
+**There is no `.agentDocs/` here yet and none is needed at this size.** Create one when a section
+above outgrows a screen or two: move the *reasoning* out and keep the *rule* here with a pointer to
+it — nobody reads a file they do not open. Each document opens with a one-line scope, and this file
+links it.
+
 ## How to work here
 
 - Check who calls it (grep `src/`, `test/`) before changing it; say when impact is unclear rather than
