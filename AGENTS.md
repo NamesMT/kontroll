@@ -59,9 +59,8 @@ history — keep the rule, not the story. Never drop a caveat to save a line.
 
 ## User-facing docs
 
-`README.md` only — no `docs/` tree here, so do not invent one. Concise first read, depth behind
-`<details>` spoilers, samples that stay runnable; docs ship in the same commit as the change, because
-the README is what npm shows.
+`README.md` only — no `docs/` tree here, so do not invent one. Concise first read, samples that stay
+runnable; docs ship in the same commit as the change, because the README is what npm shows.
 
 ## Releasing
 
